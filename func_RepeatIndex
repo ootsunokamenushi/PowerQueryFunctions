@@ -1,0 +1,16 @@
+let
+    func = (インデックス as number, 参照配列 as list)=>
+        let 
+            before = @func(インデックス-1,参照配列),
+            一つ前のデータ = 参照配列{インデックス-1},
+            現在のデータ = 参照配列{インデックス},
+            kotae = (
+                if 現在のデータ <> 一つ前のデータ then
+                    1
+                else
+                    before + 1
+            )
+        in
+            if インデックス = 0 then 1 else kotae
+in
+    func
