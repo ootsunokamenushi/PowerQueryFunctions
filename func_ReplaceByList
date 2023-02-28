@@ -1,0 +1,9 @@
+let
+    func1 = (word as text, 変換前リスト as list, 変換後リスト as list, index as number) =>
+        let
+            kotae = Text.Replace(word,変換前リスト{index},変換後リスト{index}),
+            index2 = index + 1
+        in
+            if index2 = List.Count(変換前リスト) then kotae else @func1(kotae,変換前リスト,変換後リスト,index2)    
+in
+    func1
